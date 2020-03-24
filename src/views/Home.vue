@@ -1,18 +1,15 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <PhotoCluster image1="https://i.ytimg.com/vi/yaY0lHcynpU/hqdefault.jpg"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import PhotoCluster from "../components/PhotoCluster";
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+  components: { PhotoCluster }
 };
 </script>
+
+<style lang="scss" scoped></style>
