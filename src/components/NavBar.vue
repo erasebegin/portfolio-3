@@ -75,4 +75,22 @@ h1 {
 h4 {
   font-size: 4rem;
 }
+
+h1, h4 {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .nav-subsection {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+}
 </style>

@@ -32,7 +32,10 @@ export default {
   props: {
     image1: String,
     image2: String,
-    image3: String
+    image3: String,
+    imagelink1: String,
+    imagelink2: String,
+    imagelink3: String
   }
 };
 </script>
@@ -41,7 +44,6 @@ export default {
 .main {
   display: flex;
   width: 100%;
-  overflow: hidden;
 }
 
 .image-container {
@@ -49,7 +51,7 @@ export default {
   border: 1px solid black;
   padding: 1em;
   background: white;
-  box-shadow: 1px 1px 10px #5a5a5a57;
+  box-shadow: 1px 1px 5px #5a5a5a57;
 }
 
 .img1 {
@@ -58,9 +60,7 @@ export default {
 }
 
 .img1:hover {
-    transform: rotate(-17deg) translate(60px, 70px) scale(1.1, 1.1);
-    transition: 200ms;
-    z-index: 100;
+  transform: rotate(-17deg) translate(60px, 70px) scale(1.1, 1.1);
 }
 
 .img2 {
@@ -69,9 +69,7 @@ export default {
 }
 
 .img2:hover {
-    transform: rotate(13deg) translate(200px, 150px) scale(1.1, 1.1);
-    transition: 200ms;
-    z-index: 100;
+  transform: rotate(13deg) translate(200px, 150px) scale(1.1, 1.1);
 }
 
 .img3 {
@@ -80,9 +78,15 @@ export default {
 }
 
 .img3:hover {
-    transform: rotate(18deg) translate(300px, 300px) scale(1.1, 1.1);
-    transition: 200ms;
-    z-index: 100;
+  transform: rotate(18deg) translate(300px, 300px) scale(1.1, 1.1);
+}
+
+.img1:hover,
+.img2:hover,
+.img3:hover {
+  z-index: 100;
+  transition: 200ms;
+  box-shadow: 1px 1px 10px #4b4b4b57;
 }
 
 .img1 img,
@@ -92,7 +96,7 @@ export default {
 }
 
 .image-number {
-  font-family: "Amatic SC", cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 700;
   position: fixed;
   text-align: center;
@@ -114,5 +118,47 @@ export default {
 
 .image-number-3 {
   transform: translate(-20px, -20px);
+}
+
+@media (max-width: 700px) {
+  .img1 {
+    transform: rotate(20deg) translate(250px, 50px);
+    transition: 200ms;
+  }
+  .img1:hover {
+    transform: rotate(5deg) translate(250px, 50px) scale(1.5, 1.5);
+  }
+  .img2 {
+    transform: rotate(20deg) translate(200px, 250px);
+    transition: 200ms;
+  }
+  .img2:hover {
+    transform: rotate(5deg) translate(200px, 250px) scale(1.5, 1.5);
+  }
+  .img3 {
+    transform: rotate(40deg) translate(400px, 50px);
+    transition: 200ms;
+  }
+  .img3:hover {
+    transform: rotate(30deg) translate(400px, 50px) scale(1.5, 1.5);
+  }
+
+  .img1 img,
+  .img2 img,
+  .img3 img {
+    max-height: 100px;
+  }
+
+  .image-number-1 {
+    transform: translate(-30px, -30px);
+  }
+
+  .image-number-2 {
+    transform: translate(-30px, -30px);
+  }
+
+  .image-number-3 {
+    transform: translate(-30px, -30px);
+  }
 }
 </style>
