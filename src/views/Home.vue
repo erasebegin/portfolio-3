@@ -1,6 +1,10 @@
 <template>
   <div>
-    <PhotoCluster image1="https://i.ytimg.com/vi/yaY0lHcynpU/hqdefault.jpg"/>
+    <PhotoCluster
+      imagefile1="https://i.ytimg.com/vi/yaY0lHcynpU/hqdefault.jpg"
+      imagedescription1="This is some text describing the project. It was a great project that is very good and has lots of excellent things to offer"
+      :uselink="true"
+    />
   </div>
 </template>
 
